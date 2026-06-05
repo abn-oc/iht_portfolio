@@ -1,0 +1,45 @@
+.entry {
+  margin-bottom: 1.25rem;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9375rem;
+}
+
+.titleLink {
+  font-weight: 600;
+  color: var(--link-blue);
+  text-decoration: underline;
+  font-size: 0.9375rem;
+}
+
+.titleLink:hover {
+  color: #004999;
+}
+
+.date {
+  color: var(--text-tertiary);
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.excerpt {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
