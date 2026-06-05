@@ -6,7 +6,7 @@ export default function HeaderSection() {
   return (
     <div className={styles.container}>
       <div className={styles.avatarWrap}>
-        <Avatar size={128} />
+        <Avatar size={160} />
       </div>
 
       <div className={styles.content}>

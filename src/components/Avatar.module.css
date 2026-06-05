@@ -39,12 +39,19 @@
   border: 1px solid;
   border-color: #ffffff #808080 #808080 #ffffff;
   box-shadow: inset 1px 1px 0px #ffffff, inset -1px -1px 0px #0a0a0a;
-  cursor: not-allowed;
-  opacity: 0.8;
+  cursor: pointer;
   color: #000;
   line-height: 1;
   padding: 0;
   flex-shrink: 0;
+  font-family: inherit;
+}
+
+.closeBtn:active {
+  border-color: #808080 #ffffff #ffffff #808080;
+  box-shadow: inset 1px 1px 0px #0a0a0a;
+  padding-top: 1px;
+  padding-left: 1px;
 }
 
 .viewport {
