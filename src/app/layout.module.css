@@ -1,0 +1,12 @@
+.wrapper {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .wrapper {
+    padding: 4rem 2rem;
+  }
+}

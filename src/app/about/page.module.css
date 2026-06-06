@@ -4,17 +4,6 @@
   animation: slideUp 0.5s ease-out;
 }
 
-.sectionTitle {
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-primary);
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border-color);
-}
-
 .divider {
   margin: 3rem 0;
 }

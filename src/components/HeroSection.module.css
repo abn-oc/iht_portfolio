@@ -16,5 +16,28 @@
   color: var(--text-secondary);
   font-weight: 400;
   max-width: 28rem;
-  margin: 0 auto;
+  margin: 0 auto 1.25rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.link {
+  color: var(--link-blue);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.link:hover {
+  color: #004999;
+}
+
+.sep {
+  color: var(--text-tertiary);
 }
