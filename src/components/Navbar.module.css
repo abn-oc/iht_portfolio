@@ -1,0 +1,28 @@
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8125rem;
+  margin-bottom: 2rem;
+}
+
+.link {
+  color: var(--link-blue);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.link:hover {
+  color: #004999;
+}
+
+.active {
+  color: #1a1a1a;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.sep {
+  color: var(--text-tertiary);
+}

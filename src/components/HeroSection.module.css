@@ -1,0 +1,43 @@
+.hero {
+  text-align: center;
+  padding: 3rem 0 1rem;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  max-width: 28rem;
+  margin: 0 auto 1.25rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.link {
+  color: var(--link-blue);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.link:hover {
+  color: #004999;
+}
+
+.sep {
+  color: var(--text-tertiary);
+}

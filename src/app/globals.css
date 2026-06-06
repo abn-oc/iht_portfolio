@@ -1,18 +1,16 @@
-@import "tailwindcss";
-
 :root {
-  --background: #f4f4f5; /* Clean light gray background so gray windows pop elegantly */
-  --foreground: #1a1a1a;
+  --bg-primary: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #555555;
+  --text-tertiary: #888888;
+  --border-color: #d3d3d3;
   --font-mono: 'JetBrains Mono', 'Courier New', monospace;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-mono: var(--font-mono);
+  --link-blue: #0066cc;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -21,56 +19,92 @@ html {
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
   font-family: var(--font-mono);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Scrollbar styled with Windows 95 bevel look */
-::-webkit-scrollbar {
-  width: 16px;
-  height: 16px;
-  background-color: #dfdfdf;
+/* Static scanline + VHS overlay */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.025) 0px,
+      rgba(0, 0, 0, 0.025) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    radial-gradient(ellipse at center, transparent 65%, rgba(0, 0, 0, 0.03) 100%);
 }
 
-::-webkit-scrollbar-track {
-  background-image: radial-gradient(circle, #dfdfdf 20%, transparent 20%), radial-gradient(circle, #dfdfdf 20%, transparent 20%);
-  background-size: 2px 2px;
-  background-position: 0 0, 1px 1px;
-  background-color: #c0c0c0;
+/* Moving CRT scanline */
+.crt-line {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.06);
+  pointer-events: none;
+  z-index: 10000;
+  animation: crtMove 8s linear infinite;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #c0c0c0;
-  border: 2px solid;
-  border-color: #ffffff #808080 #808080 #ffffff;
-  box-shadow: inset 1px 1px 0px #ffffff, inset -1px -1px 0px #0a0a0a;
+@keyframes crtMove {
+  from {
+    top: -3px;
+  }
+  to {
+    top: 100%;
+  }
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: #b0b0b0;
+/* Typography */
+h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
 }
 
-/* Utilities for hiding scrollbar arrows if needed, or keeping it classic */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-/* Button click effect for win95-btn */
-.win95-btn:active {
-  border-color: #808080 #ffffff #ffffff #808080 !important;
-  box-shadow: inset 1px 1px 0px #0a0a0a !important;
-  padding-top: 2px !important;
-  padding-left: 2px !important;
+h2 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
 }
 
-/* Inactive title bar style (optional fallback) */
-.win95-window-inactive {
-  border-color: #ffffff #808080 #808080 #ffffff;
+p {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--link-blue);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #004999;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
 }

@@ -1,0 +1,43 @@
+.entry {
+  margin-bottom: 1.25rem;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9375rem;
+}
+
+.nameLink {
+  font-weight: 600;
+  color: var(--link-blue);
+  text-decoration: underline;
+  font-size: 0.9375rem;
+}
+
+.nameLink:hover {
+  color: #004999;
+}
+
+.tech {
+  color: var(--text-tertiary);
+  font-size: 0.75rem;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}

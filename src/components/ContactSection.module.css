@@ -1,0 +1,53 @@
+.contact {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.heading {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+  border: none;
+  padding: 0;
+}
+
+.imageWrap {
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  display: block;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.link {
+  color: var(--link-blue);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.link:hover {
+  color: #004999;
+}
+
+.separator {
+  color: var(--text-tertiary);
+}
