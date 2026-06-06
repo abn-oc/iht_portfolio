@@ -69,28 +69,6 @@ body::after {
   }
 }
 
-/* Windows 95 scrollbar */
-::-webkit-scrollbar {
-  width: 16px;
-  height: 16px;
-  background-color: #dfdfdf;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #c0c0c0;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #c0c0c0;
-  border: 2px solid;
-  border-color: #ffffff #808080 #808080 #ffffff;
-  box-shadow: inset 1px 1px 0px #ffffff, inset -1px -1px 0px #0a0a0a;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #b0b0b0;
-}
-
 /* Typography */
 h1 {
   font-size: 1.75rem;

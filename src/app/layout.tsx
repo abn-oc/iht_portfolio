@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 import Navbar from '@/components/Navbar';
+import CustomCursor from '@/components/CustomCursor';
 import './globals.css';
 import styles from './layout.module.css';
 
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </div>
         <div className="crt-line" />
+        <CustomCursor />
       </body>
     </html>
   );
