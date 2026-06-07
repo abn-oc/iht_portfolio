@@ -18,6 +18,10 @@ export default function HeroSection() {
         <a href="mailto:abdullah.iht22@gmail.com" className={styles.link}>
           email
         </a>
+        <span className={styles.sep}>/</span>
+        <a href="/Abdullah_Ihtasham.pdf" target="_blank" rel="noopener noreferrer" className={styles.link}>
+          resume
+        </a>
       </div>
     </div>
   );
