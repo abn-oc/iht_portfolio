@@ -1,3 +1,9 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .window {
   display: inline-block;
   padding: 3px;
@@ -65,4 +71,32 @@
 .art {
   display: block;
   user-select: none;
+}
+
+.iconBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.iconBtn:hover .icon {
+  filter: brightness(1.2) drop-shadow(0 0 4px rgba(0, 102, 204, 0.4));
+}
+
+.icon {
+  display: block;
+  image-rendering: pixelated;
+}
+
+.iconLabel {
+  font-size: 11px;
+  color: var(--text-primary);
+  text-align: center;
+  word-break: break-all;
+  max-width: 72px;
 }

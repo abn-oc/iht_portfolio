@@ -21,24 +21,13 @@ export default function CustomCursor() {
       target.current.y = e.clientY;
     };
 
-    const isInteractive = (el: Element | null) =>
-      el ? el.closest(SELECTORS) : null;
-
-    const onOver = (e: MouseEvent) => {
-      const link = isInteractive(e.target as Element);
-      const rel = isInteractive(e.relatedTarget as Element | null);
-      if (link && link !== rel) hover.current = true;
-    };
-
-    const onOut = (e: MouseEvent) => {
-      const link = isInteractive(e.target as Element);
-      const rel = isInteractive(e.relatedTarget as Element | null);
-      if (link && link !== rel) hover.current = false;
+    const onLeave = () => {
+      hover.current = false;
     };
 
     document.addEventListener('mousemove', onMove);
-    document.addEventListener('mouseover', onOver);
-    document.addEventListener('mouseout', onOut);
+    document.addEventListener('mouseleave', onLeave);
+    document.addEventListener('click', onLeave);
 
     const el = elRef.current;
     if (!el) return;
@@ -50,10 +39,16 @@ export default function CustomCursor() {
       pos.current.x += dx * 0.15;
       pos.current.y += dy * 0.15;
 
+      const under = document.elementFromPoint(target.current.x, target.current.y);
+      hover.current = under !== null && under !== document.documentElement && under !== document.body
+        ? under.closest(SELECTORS) !== null
+        : false;
+
       const ts = hover.current ? 1.3 : 1;
       const tr = hover.current ? 45 : 0;
-      s.current += (ts - s.current) * 0.12;
-      r.current += (tr - r.current) * 0.12;
+      const k = hover.current ? 0.12 : 0.25;
+      s.current += (ts - s.current) * k;
+      r.current += (tr - r.current) * k;
 
       el.style.transform = `translate(${pos.current.x}px, ${pos.current.y}px) scale(${s.current}) rotate(${r.current}deg)`;
       frame = requestAnimationFrame(tick);
@@ -63,8 +58,8 @@ export default function CustomCursor() {
     return () => {
       cancelAnimationFrame(frame);
       document.removeEventListener('mousemove', onMove);
-      document.removeEventListener('mouseover', onOver);
-      document.removeEventListener('mouseout', onOut);
+      document.removeEventListener('mouseleave', onLeave);
+      document.removeEventListener('click', onLeave);
     };
   }, []);
 
