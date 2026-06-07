@@ -1,4 +1,6 @@
 import HeroSection from '@/components/HeroSection';
+import AboutSection from '@/components/AboutSection';
+import SkillsSection from '@/components/SkillsSection';
 import WorkSection from '@/components/WorkSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import ContactSection from '@/components/ContactSection';
@@ -8,17 +10,19 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <HeroSection />
+      <div className={styles.section}>
+        <AboutSection />
+      </div>
+      <div className={styles.section}>
+        <SkillsSection />
+      </div>
 
-      <hr className={styles.divider} />
-
-      <section id="work">
+      <section id="work" className={styles.section}>
         <h2 className={styles.sectionTitle}>Work</h2>
         <WorkSection />
       </section>
 
-      <hr className={styles.divider} />
-
-      <section id="projects">
+      <section id="projects" className={styles.section}>
         <h2 className={styles.sectionTitle}>Projects</h2>
         <ProjectsSection />
       </section>

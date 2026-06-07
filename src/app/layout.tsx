@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
-import Navbar from '@/components/Navbar';
 import CustomCursor from '@/components/CustomCursor';
 import './globals.css';
 import styles from './layout.module.css';
@@ -22,7 +21,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${jetbrainsMono.variable}`}>
       <body>
         <div className={styles.wrapper}>
-          <Navbar />
           {children}
         </div>
         <div className="crt-line" />

@@ -1,12 +1,11 @@
 .contact {
-  margin-top: 4rem;
+  margin-top: 1.5rem;
   padding-top: 2rem;
-  border-top: 1px solid var(--border-color);
   text-align: center;
 }
 
 .heading {
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
