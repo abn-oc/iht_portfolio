@@ -7,7 +7,7 @@ export default function AboutPage() {
     <main className={styles.main}>
       <AboutSection />
 
-      <hr className={styles.divider} />
+      {/* <hr className={styles.divider} /> */}
 
       <SkillsSection />
     </main>

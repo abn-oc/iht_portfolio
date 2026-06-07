@@ -8,8 +8,10 @@ export default function AboutSection() {
       <div className={styles.textCol}>
         <h2 className={styles.heading}>About</h2>
         <p className={styles.text}>
-          Computer Science student @ FAST NUCES. Building AI-driven systems and backend infrastructure.
-          Interested in fintech, LLMs, and distributed systems.
+          CS student @ FAST NUCES.
+          Based in Lahore, Pakistan. <br/>
+          Building AI systems and full-stack apps.
+          Interested in how AI can and is affecting our lives.
         </p>
       </div>
       <div className={styles.imageCol}>

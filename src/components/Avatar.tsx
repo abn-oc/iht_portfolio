@@ -18,8 +18,8 @@ export default function Avatar({ size = 160 }: { size?: number }) {
       </div>
       <div className={styles.viewport}>
         <img
-          src={isAngry ? '/angry_iht.jpg' : '/iht.jpg'}
-          alt={isAngry ? 'Abdullah Ihtesham (angry)' : 'Abdullah Ihtesham'}
+          src={isAngry ? '/iht.jpg' : '/iht.jpg'}
+          alt={isAngry ? 'Abdullah Ihtasham' : 'Abdullah Ihtasham'}
           width={size}
           height={size}
           className={styles.art}

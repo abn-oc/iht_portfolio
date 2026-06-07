@@ -25,16 +25,10 @@ export default function WorkSection() {
   return (
     <div>
       <WorkEntry
-        title="Full-Stack Developer Intern"
+        title="Web Developer Intern"
         company="Fast Nexa"
-        period="Spring 2024"
-        description="Built HRMS web application using Spring Boot and PostgreSQL. Deployed on AWS S3. Implemented authentication flows and data persistence layers."
-      />
-      <WorkEntry
-        title="AI Research (Ongoing)"
-        company="FAST NUCES AI Lab"
-        period="2023–2024"
-        description="Explored LLM fine-tuning, RAG systems, and agent architectures. ML evaluation metrics, classification/regression pipelines."
+        period="Jul 2025 – Aug 2025"
+        description="Engineered backend REST API for a book management system and revamped an HRMS frontend to deliver responsive, bug-free user experiences."
       />
     </div>
   );

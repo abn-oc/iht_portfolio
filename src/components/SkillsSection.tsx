@@ -2,10 +2,11 @@ import React from 'react';
 import styles from './SkillsSection.module.css';
 
 const skills = [
-  { category: 'Languages', items: 'TypeScript, Python, Java, SQL' },
-  { category: 'Backend', items: 'Node.js, Spring Boot, PostgreSQL, Supabase' },
+  { category: 'Languages', items: 'TypeScript, Python, C++, Java, SQL' },
+  { category: 'Backend', items: 'Node.js, FastAPI, PostgreSQL, Supabase, Spring Boot' },
   { category: 'Frontend', items: 'React, Next.js, React Native, Expo' },
   { category: 'AI/ML', items: 'LLMs, RAG, TensorFlow, Gemini API' },
+  { category: 'Game Development', items: 'Unity, C#, C++, Raylib' },
 ];
 
 export default function SkillsSection() {
