@@ -13,7 +13,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'Abdullah Ihtesham – AI & Full-Stack Developer',
   description:
-    'Computer Science student @ FAST NUCES. Building AI-driven systems and backend infrastructure. Interested in fintech, LLMs, and distributed systems.',
+    'Building AI systems and full-stack apps. Interested in how AI can and is affecting our lives.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
